@@ -6,3 +6,4 @@ var product = new Product(name: "Microfono", description: "è comodo", price: 40
 Console.WriteLine(product.Id);
 Console.WriteLine(product.Name);
 Console.WriteLine(product.AllName());
+var product2 = new Product();
