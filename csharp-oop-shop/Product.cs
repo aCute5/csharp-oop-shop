@@ -16,18 +16,16 @@ namespace csharp_oop_shop
 
         public Product()
         {
-            Id = new Random().Next();
+            Id = new Random().Next(100,900);
         }
-        public Product(string name, string description, decimal price, int Vat)
+        public Product(string name, string description, decimal price)
         {
-            this.Id = new Random().Next(); 
+            this.Id = new Random().Next(100, 900);
             this.Name = name;
             this.Description = description;
             this.Price = price;
-            this.Vat = Vat;
-
-
         }
+
         public decimal BasePrice()
         {
             return Price;
@@ -44,6 +42,21 @@ namespace csharp_oop_shop
         public string ZeroId()
         {
             return Id.ToString().PadLeft(8, '0');
+
+            // Function senza usare il metodo PadLeft
+            //public string 0Code()
+            //{
+            //    var stringCode = Convert.ToString(Code);
+            //   
+            //    var iterations = 8 - stringCode.Length;
+
+            //    for (int i = 0; i < iterations; i++)
+            //    {
+            //        stringCode = "0" + stringCode; 
+            //    }
+
+            //    return stringCode;
+            //}
         }
 
     }
